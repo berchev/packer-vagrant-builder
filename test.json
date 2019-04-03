@@ -1,0 +1,14 @@
+
+{
+  "variables": {
+    "box_from_vagrant_cloud": "hashicorp/precise64"
+  },
+  "builders": [
+    {
+      "provider": "virtualbox",
+      "communicator": "ssh",
+      "source_path": "{{user `box_from_vagrant_cloud`}}",
+      "type": "vagrant"
+    }
+  ]
+}
